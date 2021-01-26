@@ -5,7 +5,18 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
 	Refugio refugio = new Refugio();
+
+	List<Mamifero> mamiferos = refugio.getMamiferos();
+	List<Integer> horariosDeComidas = new ArrayList<>();
+
+	horariosDeComidas.add(1500);
+	horariosDeComidas.add(2300);
+
+	Mamifero m = new Mamifero(juan, 1, horarioDeComidas);
+
+	mamiferos.add(new Mamifero());
 
 	refugio.agregarMamifero(new Mamifero());
     }

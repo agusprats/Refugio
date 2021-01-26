@@ -1,19 +1,32 @@
 package adaitw.java;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Animal {
-    protected String  nombreCollar;
+
+    protected String  nombre;
     protected Integer numeroCollar;
-    protected List <Integer> horarioDeComidas;
+    protected List <Integer> horariosDeComidas;
+    protected Boolean vacunado;
+    protected Integer edadEstimada;
 
-    public String getNombreCollar() {
-        return nombreCollar;
+    // Primera forma
+    public Animal(String nombre, Integer numeroId, List<Integer> horariosDeComidas) {
+        this.nombre = nombre;
+        this.numeroCollar= numeroId;
+        this.horariosDeComidas = horariosDeComidas;
     }
 
-    public void setNombreCollar(String nombreCollar) {
-        this.nombreCollar = nombreCollar;
+    // Segunda forma
+    public Animal(String nombre, Integer numeroId, String horariosDeComidas) {
+        this.nombre = nombre;
+        this.numeroCollar= numeroId;
+        this.horarioDeComidas = horarioDeComidas;
+        this.horariosDeComidas = new ArrayList<>();
     }
+
+
 
     public Integer getNumeroCollar() {
         return numeroCollar;
@@ -23,11 +36,11 @@ public class Animal {
         this.numeroCollar = numeroColllar;
     }
 
-    public List<Integer> getHorarioDeComidas() {
-        return horarioDeComidas;
+    public List<Integer> getHorariosDeComidas() {
+        return horariosDeComidas;
     }
 
-    public void setHorarioDeComidas(List<Integer> horarioDeComidas) {
-        this.horarioDeComidas = horarioDeComidas;
+    public void setHorariosDeComidas(List<Integer> horariosDeComidas) {
+        this.horariosDeComidas = horariosDeComidas;
     }
 }
